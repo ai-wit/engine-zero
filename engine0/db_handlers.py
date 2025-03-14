@@ -1,5 +1,7 @@
 from sqlalchemy.orm import Session
 from models import Notice, AIResult
+from datetime import date
+from typing import List
 
 # Notice CRUD operations
 def create_notice(db: Session, subject, summary, department, agency, filename, start_date, end_date):
@@ -38,6 +40,13 @@ def create_ai_result(db: Session, notice_id, subject, summary, entity, fund, sup
 
 def get_ai_result(db: Session, ai_result_id: int):
     return db.query(AIResult).filter(AIResult.id == ai_result_id).first()
+
+def get_ai_results_from_date(db: Session, base_date: date) -> List[tuple]:
+    # return db.query(AIResult).filter(AIResult.created_at > base_date).all()
+    return db.query(AIResult, Notice)\
+             .join(Notice, AIResult.notice_id == Notice.id)\
+             .filter(AIResult.created_at > base_date)\
+             .all()
 
 def update_ai_result(db: Session, ai_result_id: int, **kwargs):
     ai_result = db.query(AIResult).filter(AIResult.id == ai_result_id).first()

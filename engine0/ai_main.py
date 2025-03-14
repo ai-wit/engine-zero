@@ -24,11 +24,11 @@ url = "https://www.bizinfo.go.kr/bbs/AS/excelDowload.do?1=1&hashCode=01&schEndAt
 # 현재 날짜 가져오기
 today = datetime.today()
 
-# 3일 전 날짜 계산하기
-three_days_ago = today - timedelta(days=args.duration)
+# n일 전 날짜 계산하기
+n_days_ago = today - timedelta(days=args.duration)
 
 # YYYY-MM-DD 형식으로 출력하기
-base_date = three_days_ago.strftime("%Y-%m-%d")
+base_date = n_days_ago.strftime("%Y-%m-%d")
 
 # 엑셀 파일 다운로드
 response = requests.get(url)
