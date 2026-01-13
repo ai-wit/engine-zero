@@ -7,7 +7,6 @@
 - **작업 디렉토리**: workspace/ai-wit_engine-zero_PVTI_lADOC9ON184BMZmezgjhVD4
 
 ## 개발 방침
-1. 단드시 작업이 진행되면 commit 후 PR을 해야함.
 
 ### TDD (테스트 주도 개발)
 1. 요구사항에 따른 모든 테스트 코드를 먼저 작성
