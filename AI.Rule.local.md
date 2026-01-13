@@ -1,10 +1,10 @@
 # 작업 지침
 
 ## 작업 정보
-- **작업 ID**: PVTI_lADOC9ON184BMZmezgjhVD4
+- **작업 ID**: PVTI_lADOC9ON184BMZmezgjlG5Y
 - **저장소**: ai-wit/engine-zero
-- **브랜치**: issue-3
-- **작업 디렉토리**: workspace/ai-wit_engine-zero_PVTI_lADOC9ON184BMZmezgjhVD4
+- **브랜치**: issue-6
+- **작업 디렉토리**: workspace/ai-wit_engine-zero_PVTI_lADOC9ON184BMZmezgjlG5Y
 
 ## 개발 방침
 
