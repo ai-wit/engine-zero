@@ -76,18 +76,40 @@ python sender_main.py 1  # 1일간의 분석 결과 발송
 ## 📁 프로젝트 구조
 
 ```
-engine-zero/
-├── engine0/                 # 메인 애플리케이션
-│   ├── ai_main.py          # 공고 수집 및 AI 분석 메인
-│   ├── sender_main.py      # 메시지 발송 메인
-│   ├── database.py         # 데이터베이스 설정
-│   ├── models.py           # 데이터베이스 모델
-│   ├── db_handlers.py      # 데이터베이스 CRUD 핸들러
-│   ├── libs.py             # 유틸리티 함수들
+ai-wit_engine-zero/
+├── .cursor/                    # Cursor IDE 설정
+│   └── settings.json
+├── .cursorrules               # 프로젝트 규칙
+├── .gitignore                 # Git 무시 파일
+├── AI.Rule.local.md           # 프로젝트별 작업 지침
+├── data/                      # 데이터 파일
+│   └── wit_2025-03-14_160931.sql  # 샘플 데이터
+├── docs/                      # 프로젝트 문서
+│   ├── api.md                 # API 문서
+│   ├── architecture.md        # 아키텍처 문서
+│   ├── README.md              # 문서 README
+│   └── setup.md               # 설치 가이드
+├── engine0/                   # 메인 애플리케이션
+│   ├── ai_main.py             # 공고 수집 및 AI 분석 메인
+│   ├── sender_main.py         # 메시지 발송 메인
+│   ├── database.py            # 데이터베이스 설정
+│   ├── models.py              # 데이터베이스 모델
+│   ├── db_handlers.py         # 데이터베이스 CRUD 핸들러
+│   ├── libs.py                # 유틸리티 함수들
+│   ├── kakao_friend_list.py   # 카카오 친구 목록 관리
+│   ├── downloaded_file.xlsx   # 다운로드된 파일
+│   ├── solapi/                # SMS 발송 모듈
+│   │   └── main.py
 │   └── src/
-│       └── lib/            # 설정 및 라이브러리
-├── data/                   # 데이터 파일
-└── docs/                   # 문서 (향후 추가 예정)
+│       └── lib/               # 설정 및 라이브러리
+│           ├── __init__.py
+│           ├── auth.py        # 인증 관련
+│           ├── config-dist.ini # 설정 템플릿
+│           ├── config.ini     # 설정 파일
+│           ├── message.py     # 메시지 처리
+│           └── storage.py     # 저장소 관리
+├── README.md                  # 프로젝트 README
+└── requirements.txt           # Python 의존성
 ```
 
 ## 🛠️ 개발 정보
