@@ -1,0 +1,10 @@
+{
+  "agent.terminal.enabled": true,
+  "agent.terminal.allowedCommands": ["git add", "git commit", "git push", "git status", "git log", "npm", "yarn", "gh pr create", "gh pr view", "gh auth login"],
+  "agent.terminal.blockedCommands": ["rm", "sudo", "curl", "wget"],
+  "agent.terminal.requireConfirmation": false,
+  "agent.securityLevel": "low",
+  "agent.experimental.terminalExecution": true,
+  "agent.terminal.executionMode": "direct",
+  "agent.terminal.sandboxMode": false
+}
